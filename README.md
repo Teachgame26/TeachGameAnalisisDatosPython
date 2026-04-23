@@ -57,11 +57,15 @@ AnalisisDatosPython/
 
 ## Instalación
 python -m venv venv
-source venv/bin/activate
+source venv/Scripts/Activate
 pip install -r requirements.txt
 
+## Ejecución
+
+python analisis.py
+
 ## Autores
-Mayerlin Cubides
-Paola Arismendy
-Johana Peña
+- Mayerlin Cubides
+- Paola Arismendy
+- Johana Peña
 

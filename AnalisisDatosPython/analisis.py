@@ -1,7 +1,7 @@
 import pandas as pd
 
-
-from AnalisisDatosPython.src.limpieza import (
+# 🔹 Importar funciones desde tu archivo limpieza.py
+from src.limpieza import (
     cargar_datos,
     manejar_valores_nulos,
     estandarizar_texto,
@@ -10,8 +10,8 @@ from AnalisisDatosPython.src.limpieza import (
 )
 
 # 1️ Cargar datos
-estudiantes = cargar_datos("AnalisisDatosPython/data/estudiantes.csv")
-calificaciones = cargar_datos("AnalisisDatosPython/data/calificaciones.csv")
+estudiantes = cargar_datos("data/estudiantes.csv")
+calificaciones = cargar_datos("data/calificaciones.csv")
 
 # 2️ Limpieza de estudiantes
 estudiantes = manejar_valores_nulos(estudiantes)
@@ -44,7 +44,3 @@ aprobados_matematicas = df[
 ]
 
 print(f"\n Estudiantes que aprobaron Matemáticas: {len(aprobados_matematicas)}")
-
-
-
-
