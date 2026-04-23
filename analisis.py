@@ -10,8 +10,14 @@ from src.limpieza import (
 estudiantes = src.limpieza.cargar_datos("data/estudiantes.csv")
 calificaciones = src.limpieza.cargar_datos("data/calificaciones.csv")
 
-# 2. Limpieza de estudiantes
-estudiantes = manejar_valores_nulos(estudiantes)
-estudiantes = estandarizar_texto(estudiantes, ["nombre", "grado"])
-estudiantes = eliminar_duplicados(estudiantes, "id_estudiante")
+# 1. Análisis de Frecuencia
+estudiante_mas_juegos = df["nombre"].value_counts().idxmax()
+print(f"\n✅ Estudiante con más participaciones en juegos: {estudiante_mas_juegos}")
+
+# 2. Análisis de Agregación
+promedio_por_materia = df.groupby("materia")["nota"].mean()
+print("\n✅ Nota promedio por materia:")
+print(promedio_por_materia)
+
+
 
