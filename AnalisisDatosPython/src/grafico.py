@@ -18,5 +18,5 @@ plt.xlabel("Etiqueta del Eje X")
 plt.ylabel("Etiqueta del Eje Y")
 plt.xticks(rotation=45) # Rotar textos para que no colisionen
 
-# 4. Renderizar (Mostrar a pantalla)
+# 4. Renderizar (Mostrar a pantalla) el como finaliza en plt.show() que es la función que muestra el gráfico en pantalla. Es el paso final después de haber preparado, pintado y personalizado el gráfico.
 plt.show()
