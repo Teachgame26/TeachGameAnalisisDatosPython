@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
 import pandas as pd
 
 app = FastAPI()
@@ -13,11 +14,17 @@ def home():
 def entregar_headless():
     df = pd.DataFrame([{"id": 1, "valor": 50}])
 
-    # Retorno estricto orientado a filas (headless JSON payload)
     return {
         "status": "ok",
         "payload": df.to_dict(orient="records")
     }
+
+@app.get("/imagen")
+def obtener_imagen():
+    return FileResponse(
+        "data/reports/reporte_impresion.png",
+        media_type="image/png"
+    )
 
 
 
